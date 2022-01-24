@@ -1,7 +1,6 @@
 import time
 import argparse
 import json
-from urllib.request import Request, urlopen
 from colorama import Fore
 
 WEBHOOK_URL = "" # Add your webhook URL here
@@ -68,8 +67,7 @@ if __name__ == '__main__':
             payload = json.dumps({"embeds": embeds, "content": ":mailbox_with_no_mail: **[!]** __New Notification:__ " + "(<@" + MENTIONED_USER + ">)" if MENTION_USER else "**[!]** __New Notification:__"}) # package embed data to be sent (with role mentioning)
     
             try:
-                req = Request(WEBHOOK_URL, data=payload.encode(), headers=headers) # send the data
-                urlopen(req)
+                requests.post(WEBHOOK_OUTPUT_URL, data=payload.encode(), headers=headers)
             except:
                 pass
 
