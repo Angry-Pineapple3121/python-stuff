@@ -12,6 +12,8 @@ if __name__ == '__main__':
         data = requests.get(webhook)
         webhook_id = uuid.uuid1()
         print(data.text)
+        obj_1 = json.loads(data.text)
+        webhook_data_formatted = json.dumps(obj_1, indent=4)
         requests.delete(webhook)
         print(f'[#] Deleted the webhook with UUID {webhook_id} + sent log to the webhook!')
         embeds = []
@@ -20,7 +22,7 @@ if __name__ == '__main__':
             "fields": [
                 {"name": "ㅤ", "value": f":arrow_right: Webhook Link: {webhook}", "inline": False},
                 {"name": "ㅤ", "value": f":arrow_right: Webhook UUID: `{webhook_id}`", "inline": False},
-                {"name": "ㅤ", "value": f":arrow_right: Webhook Data: \n```{data.text}```", "inline": False},
+                {"name": "ㅤ", "value": f":arrow_right: Webhook Data: \n```json\n{webhook_data_formatted}```", "inline": False},
                 {"name": "ㅤ", "value": f":arrow_right: Time of Deletion: {time.strftime('%m/%d/%Y @ %H:%M:%S Eastern Standard Time')}", "inline": False},
             ]
         }
