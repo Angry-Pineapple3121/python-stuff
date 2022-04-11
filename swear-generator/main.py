@@ -10,5 +10,4 @@ if __name__ == "__main__":
     number = int(number)
     RANDOM_WORD = random.choices(WORDS_INDEX, k=number)
     
-    print(f"[~] Generating {number} words, please wait")
     print(f"[!] Finished generating {number} words, word list: \n{RANDOM_WORD}")
