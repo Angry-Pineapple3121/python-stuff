@@ -1,6 +1,7 @@
 # webhook-remover
 Over-complicated tool to delete Discord webhooks and export the data.
-  
+
+## Instructions
 1) Download `main.py`
 2) Configure available variables (`WEBHOOK_URL`)
 3) Run the script and enter a webhook when prompted. In your logs channel, you'll see:
