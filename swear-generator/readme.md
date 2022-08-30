@@ -1,10 +1,9 @@
 # swear-generator
-generates swear words with 2 simple commands
+Generates a random number of swear words with just a few clicks!
 
-**words source:** [wikipedia](https://en.wiktionary.org/w/index.php?title=Category:English_vulgarities)
+**Words Source:** [Wikipedia, English vulgarities](https://en.wiktionary.org/w/index.php?title=Category:English_vulgarities)
 
-## instructions (like anyone needs these)
-1) go to your terminal and cd to the directory
-2) python3 main.py
-3) enter the number of words you want to generate
-4) enjoy your swear words
+## Instructions
+1) Download `main.py`
+2) Run the script with `python3 main.py`
+3) Input the number of swear words you'd like to generate
