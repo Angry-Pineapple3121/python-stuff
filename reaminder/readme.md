@@ -1,8 +1,8 @@
 # rea-minder
-sends notifications to a person of your choosing in a channel through a discord webhook
+Sends automatic notifications through Discord webhooks, can optionally also ping a user with your desired content.
 
-## instructions (like anyone needs these)
-1) setup your webhook url
-2) (optional) turn on user mentioning and add a user id
-3) python3 REAminder-0.4.0.py
-4) enjoy your friends getting pissed off at you
+## Instructions
+1) Download `REAminder-0.4.0.py`
+2) Configure available variables (`WEBHOOK_URL`, `MENTION_USER`, `MENTIONED_USER`)
+3) Edit the `embed` section (inside of `fields`) to whatever message you'd like
+4) Run the script with `python3 REAminder-0.4.0.py -f [frequency in seconds]`
