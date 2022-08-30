@@ -1,13 +1,14 @@
 # hypixel banwave scanner
-automatically pulls & sends data about hypixel punishment statistics (through discord webhook) so you can know when to stop cheating
-has 5 distinct levels of "ban risk" (they probably don't mean anything)
+Automatically retrieves & sends data about Hypixel's punishment staistics through a Discord webhook. Useful for people who macro farming/ghosts to know when staff are active.
 
-## instructions
-1) download `banwavescanner.py` and `requirements.txt`
-2) in the directory you downloaded these files from, run `pip install -r requirements.txt`
-3) open the `banwavescanner.py` file and configure the following:
- - your discord webhook
- - your hypixel api key
-4) run the script and accurate results will appear within **15** minutes
+Has five distinct levels of "ban risk" depending on the # of bans in 15 minutes.
 
-**NOTE:** the first round of data sent to the webhook after the script has started will **always** be 0, as it hasn't got any prior data to go off of yet
+Displays 6 data points, organized neatly.
+
+## Instructions
+1) Download `banwavescanner.py` and `requirements.txt`
+2) In the directory you downloaded these files from, run `pip install -r requirements.txt`
+3) Configure available variables (`WEBHOOK_URL`, `API_KEY`)
+4) Run the script and wait for the first round of data to populate.
+
+> **NOTE:** The first round of data sent to the webhook after the script has started will **always** show up as 0 bans. Allow the script to run for >15 minutes for accurate results.
